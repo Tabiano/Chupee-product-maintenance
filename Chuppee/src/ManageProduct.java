@@ -172,7 +172,7 @@ public class ManageProduct extends JInternalFrame {
     	bui.setNorthPane(null);
 		//setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1068, 676);
+		setBounds(100, 100, 1068, 714);
 		//setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -459,7 +459,7 @@ public class ManageProduct extends JInternalFrame {
 		
 		
 		JComboBox cbSearch = new JComboBox();
-		cbSearch.setModel(new DefaultComboBoxModel(new String[] {"product_id", "product_name"}));
+		cbSearch.setModel(new DefaultComboBoxModel(new String[] {"product_name", "product_id"}));
 		cbSearch.setBounds(572, 29, 119, 29);
 		contentPane.add(cbSearch);
 
@@ -653,7 +653,6 @@ public class ManageProduct extends JInternalFrame {
 				        txtqty.setEditable(true);
 				        btnBrow.setEnabled(true);
 				        btnBrow.setBackground(Color.GREEN);
-				      
 				        btnDelete.setEnabled(false);
 	    	            btnDelete.setBackground(Color.WHITE);
 	    	    		btnDelete.addMouseListener(new MouseAdapter() {
@@ -727,7 +726,6 @@ public class ManageProduct extends JInternalFrame {
 				} catch (Exception ex) {
 					JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 				}
-				
 			}
 		});
 		btnEdit.setFont(new Font("Tahoma", Font.BOLD, 13));
@@ -736,8 +734,6 @@ public class ManageProduct extends JInternalFrame {
 		btnEdit.setEnabled(false);
 		btnEdit.setBounds(168, 571, 139, 47);
 		contentPane.add(btnEdit);
-		
-	
 		Reset();
 	}
 }
